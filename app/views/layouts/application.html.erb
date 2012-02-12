@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <title><%= title %></title>
+    <%= csrf_meta_tag %>
+    <%= render 'layouts/stylesheets' %>
+    
+  </head>
+  
+  <body>
+    <div class="container">
+      <header>
+        <%= image_tag("logo.png", :alt => "Sample App", :class => "round") %>
+        <nav class="round">
+          <ul>
+            <%= render 'layouts/header' %>
+          </ul>
+        </nav>
+      </header>
+      <section class="round">
+        <%= yield %>
+      </section>
+	  <%= render 'layouts/footer' %>
+    </div>
+  </body>
+</html>
