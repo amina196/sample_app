@@ -10,14 +10,9 @@
   
   <body>
     <div class="container">
-      <header>
-        <%= image_tag("logo.png", :alt => "Sample App", :class => "round") %>
-        <nav class="round">
-          <ul>
+     
             <%= render 'layouts/header' %>
-          </ul>
-        </nav>
-      </header>
+          
       <section class="round">
         <%= yield %>
       </section>
