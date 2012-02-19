@@ -1,7 +1,7 @@
 SampleApp::Application.routes.draw do
-
+	resources :users #adds many routes, cf table in chapter 7
+  
   match'/signup', to: 'users#new'
-
   match '/contact', to: 'pages#contact'
   match '/about', to: 'pages#about'
   match '/help', to: 'pages#help'
