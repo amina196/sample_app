@@ -1,21 +1,4 @@
 ---
-plugins/buttons/icons/cross.png: plugins/buttons/icons/cross-1f87fac86c438386527b5e7d5ceecb0e.png
-plugins/buttons/icons/key.png: plugins/buttons/icons/key-5f38d0204e83d3d83585a62ff993342b.png
-plugins/buttons/icons/tick.png: plugins/buttons/icons/tick-09de3f730b3b6ef960450a506b0916a9.png
-plugins/buttons/readme.txt: plugins/buttons/readme-44a658764edd61d31c7f1d2b84edc07e.txt
-plugins/fancy-type/readme.txt: plugins/fancy-type/readme-cf1dfc58c313fbea681fe2a1b629c0fe.txt
-plugins/link-icons/icons/doc.png: plugins/link-icons/icons/doc-d3f4b7ad9b39b89cc969ac3ad6d8c8f2.png
-plugins/link-icons/icons/email.png: plugins/link-icons/icons/email-5cd503b361f048d039700499dd79e9a9.png
-plugins/link-icons/icons/external.png: plugins/link-icons/icons/external-3434ddfe7e6b7114e14a73bf27b39a28.png
-plugins/link-icons/icons/feed.png: plugins/link-icons/icons/feed-8a69d1caefbf5db15a1d10ff3fb230a1.png
-plugins/link-icons/icons/im.png: plugins/link-icons/icons/im-7a7381ccc94de610b02fdec360ae02d9.png
-plugins/link-icons/icons/lock.png: plugins/link-icons/icons/lock-633641f19c406146563137231f483f3e.png
-plugins/link-icons/icons/pdf.png: plugins/link-icons/icons/pdf-ae64a014d52eab7f35cf36b4c0c29014.png
-plugins/link-icons/icons/visited.png: plugins/link-icons/icons/visited-cea77dc24a977b4cb2728225f6852eb8.png
-plugins/link-icons/icons/xls.png: plugins/link-icons/icons/xls-4f6ec43c6cfd67d759ccc123fd44e1c6.png
-plugins/link-icons/readme.txt: plugins/link-icons/readme-c05f7b4f893137768f58ec83f0e738b9.txt
-plugins/rtl/readme.txt: plugins/rtl/readme-31ae4365e62f271c051768772ef80983.txt
-src/grid.png: src/grid-a3e8e6a6df57000ec00b24e8ec862608.png
 logo.png: logo-fe921ccd985f878d40261270496ad20b.png
 rails.png: rails-e4b51606cd77fda2615e7439907bfc92.png
 application.js: application-f9c23a25829e1889aa6a166cc4f1745b.js
