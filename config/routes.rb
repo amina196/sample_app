@@ -1,12 +1,14 @@
 SampleApp::Application.routes.draw do
 	resources :users #adds many routes, cf table in chapter 7
-  
+	resources :sessions, only: [:new, :create, :destroy]
+	
   match'/signup', to: 'users#new'
   match '/contact', to: 'pages#contact'
   match '/about', to: 'pages#about'
   match '/help', to: 'pages#help'
    match '/signup', to: 'pages#signup'
-   #match '/signin', to: 'pages#signin'
+   match '/signin', to: 'sessions#new'
+   match '/signout', to: 'sessions#destroy', via: :delete
    
   root to: 'pages#home'
 
