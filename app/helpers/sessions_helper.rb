@@ -4,11 +4,9 @@ module SessionsHelper
 		current_user = user
 	end
 	
-	def sign_out(user)
-		cookies.permanent[:remember_token] = nil
-		current_user = nil
+	def sign_out
+		cookies.delete(:remember_token)
 	end
-	
 	
 	#designed to handle assignment to current_user variable, called by code like "current_user = blaa"
 	def current_user= (user)  
