@@ -9,14 +9,15 @@ gem 'bcrypt-ruby', '3.0.1'
 
 
 group :development do
-	gem 'rspec-rails','2.6.1'
+
 	gem 'sqlite3'
 end
 
 group :test do
-	gem 'rspec-rails','2.6.1'
+
 	gem 'webrat','0.7.1'
 	gem 'sqlite3'
+	gem 'capybara_rails'    
 end
 
 group :production do
