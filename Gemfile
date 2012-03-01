@@ -5,8 +5,8 @@ gem 'bcrypt-ruby', '3.0.1'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
-
+gem 'faker', '1.0.1'
+gem 'will_paginate', '3.0.3'
 
 group :development do
 
@@ -17,7 +17,8 @@ group :test do
 
 	gem 'webrat','0.7.1'
 	gem 'sqlite3'
-	gem 'capybara_rails'    
+	gem 'capybara_rails'
+	gem 'factory_girl'    
 end
 
 group :production do

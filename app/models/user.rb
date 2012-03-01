@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6}
 
   
-  private
+  
   
 	def create_remember_token
 		self.remember_token = SecureRandom.urlsafe_base64 #generate a random string

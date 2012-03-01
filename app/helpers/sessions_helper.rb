@@ -23,7 +23,16 @@ module SessionsHelper
 		#but on subsequent invocations returns @current_user without calling user_from_remember_token.7
 	end
 	
-	
+	def redirect_back_or(default)
+		redirect_to(session[:return_to] || default) #evaluates to session[:return_to] unless it is nil 
+		clear_return_to
+	end
+
+	def store_location
+	#puts the requested URI in the session variable under the key :return_to
+		session[:return_to] = request.fullpath #the full path (URI) of the requested page
+	end
+  
 	private
 	def user_from_remembered_token
 		remembered_token = cookies[:remember_token]
