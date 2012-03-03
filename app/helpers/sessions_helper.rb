@@ -32,7 +32,12 @@ module SessionsHelper
 	#puts the requested URI in the session variable under the key :return_to
 		session[:return_to] = request.fullpath #the full path (URI) of the requested page
 	end
-  
+	
+	def clear_return_to
+      session.delete(:return_to)
+    end
+	
+	
 	private
 	def user_from_remembered_token
 		remembered_token = cookies[:remember_token]
