@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   def index
 	  @users = User.paginate(page: params[:page])
   end
+  
   def new
 	@user = User.new
   end
@@ -16,7 +17,7 @@ class UsersController < ApplicationController
     if @user.save
 		sign_in @user
 		flash[:success] = "Welcome to the sample app ! "
-		redirect_back_or @user  #it tells the browser to send a new request for a different URL, the newly created user’s profile
+		redirect_to @user  #it tells the browser to send a new request for a different URL, the newly created user’s profile
     else
       render 'new'
     end
@@ -40,6 +41,7 @@ class UsersController < ApplicationController
   
   def show
 	@user = User.find(params[:id])
+	@microposts = @user.microposts.paginate(page: params[:page])
   end
   
   def destroy
@@ -51,7 +53,7 @@ class UsersController < ApplicationController
   
   private
 	def signed_in_user
-		unless signed_in?
+		unless signed_in? # if !signed_in?
 			store_location
 			flash[:notice] = "Please sign in to access this page."
 			redirect_to signin_path
@@ -67,6 +69,6 @@ class UsersController < ApplicationController
 	end
 	
 	def admin_user
-		redirect_to(root_path) unless current_user.admin?
+		redirect_to(root_path) unless current_user.admin? #if current user is not admin, redirect to root path
 	end
 end
