@@ -1,6 +1,7 @@
 SampleApp::Application.routes.draw do
 	resources :users #adds many routes, cf table in chapter 7
 	resources :sessions, only: [:new, :create, :destroy]
+	resources :microposts, only: [:create, :destroy]
 	
   match'/signup', to: 'users#new'
   match '/contact', to: 'pages#contact'
@@ -10,7 +11,7 @@ SampleApp::Application.routes.draw do
    match '/signin', to: 'sessions#new'
    match '/signout', to: 'sessions#destroy'
    
-  root to: 'sessions#new'
+  root to: 'pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -37,6 +37,14 @@ module SessionsHelper
       session.delete(:return_to)
     end
 	
+	#method used in the before_filter call back in the users controller
+	def signed_in_user
+		unless signed_in? # if !signed_in?
+			store_location
+			flash[:notice] = "Please sign in to access this page."
+			redirect_to signin_path
+		end
+	end
 	
 	private
 	def user_from_remembered_token

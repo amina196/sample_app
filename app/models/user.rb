@@ -1,13 +1,13 @@
 class User < ActiveRecord::Base
-#attr in db : cf schema.rb (remember_token for sessions)
 
 	attr_accessible :name, :email, :password, :password_confirmation
 	has_secure_password
+
 #associations
-has_many :microposts
+	has_many :microposts
 
 #callbacks 
-  before_save :create_remember_token
+	before_save :create_remember_token
 	
 #validations
   validates :name, presence: true, length: { maximum: 50 }
@@ -22,4 +22,10 @@ has_many :microposts
 	def create_remember_token
 		self.remember_token = SecureRandom.urlsafe_base64 #generate a random string
 	end
+	
+	def feed
+		Micropost.where("user_id = ?",id) #id is properly escaped before being included in the underlying SQL query, at this point this is equivalent to "microposts"
+	end
+	
+	
 end

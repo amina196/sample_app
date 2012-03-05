@@ -52,13 +52,7 @@ class UsersController < ApplicationController
 
   
   private
-	def signed_in_user
-		unless signed_in? # if !signed_in?
-			store_location
-			flash[:notice] = "Please sign in to access this page."
-			redirect_to signin_path
-		end
-	end
+	#signed_in_user method in the Sessions helper
 	
 	def correct_user
 		@user = User.find(params[:id])
