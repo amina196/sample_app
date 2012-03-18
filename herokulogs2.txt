@@ -1,0 +1,101 @@
+2012-03-18T15:55:09+00:00 app[web.1]: 
+2012-03-18T15:55:10+00:00 app[web.1]: Processing by PagesController#home as HTML
+2012-03-18T15:55:10+00:00 app[web.1]:   Rendered pages/home.html.erb within layouts/application (34.2ms)
+2012-03-18T15:55:10+00:00 app[web.1]:   Rendered layouts/_header.html.erb (1.3ms)
+2012-03-18T15:55:10+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.6ms)
+2012-03-18T15:55:10+00:00 app[web.1]: Completed 200 OK in 176ms (Views: 73.0ms | ActiveRecord: 61.8ms)
+2012-03-18T15:55:10+00:00 app[web.1]: cache: [GET /] miss
+2012-03-18T15:55:10+00:00 heroku[router]: GET tutoring.herokuapp.com/ dyno=web.1 queue=0 wait=0ms service=531ms status=200 bytes=1404
+2012-03-18T15:55:10+00:00 app[web.1]: cache: [GET /assets/application-0e40e48252da936c731dab1d23c7347a.js] miss
+2012-03-18T15:55:10+00:00 app[web.1]: cache: [GET /assets/application-c9380e1ffe04fc49edf5ff3a5baa4777.css] miss
+2012-03-18T15:55:10+00:00 heroku[router]: GET tutoring.herokuapp.com/assets/application-c9380e1ffe04fc49edf5ff3a5baa4777.css dyno=web.1 queue=0 wait=0ms service=10ms status=200 bytes=73093
+2012-03-18T15:55:10+00:00 heroku[router]: GET tutoring.herokuapp.com/assets/application-0e40e48252da936c731dab1d23c7347a.js dyno=web.1 queue=0 wait=0ms service=16ms status=200 bytes=120293
+2012-03-18T15:55:14+00:00 app[web.1]: 
+2012-03-18T15:55:14+00:00 app[web.1]: 
+2012-03-18T15:55:14+00:00 app[web.1]: Started GET "/signup" for 165.123.234.239 at 2012-03-18 15:55:14 +0000
+2012-03-18T15:55:14+00:00 app[web.1]: Processing by UsersController#new as HTML
+2012-03-18T15:55:14+00:00 app[web.1]:   Rendered shared/_error_messages.html.erb (0.3ms)
+2012-03-18T15:55:14+00:00 app[web.1]:   Rendered users/new.html.erb within layouts/application (52.6ms)
+2012-03-18T15:55:14+00:00 app[web.1]:   Rendered layouts/_header.html.erb (2.9ms)
+2012-03-18T15:55:14+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.3ms)
+2012-03-18T15:55:14+00:00 app[web.1]: Completed 200 OK in 65ms (Views: 56.6ms | ActiveRecord: 1.8ms)
+2012-03-18T15:55:14+00:00 app[web.1]: cache: [GET /signup] miss
+2012-03-18T15:55:14+00:00 heroku[router]: GET tutoring.herokuapp.com/signup dyno=web.1 queue=0 wait=0ms service=73ms status=304 bytes=0
+2012-03-18T15:55:14+00:00 app[web.1]: cache: [GET /assets/application-0e40e48252da936c731dab1d23c7347a.js] miss
+2012-03-18T15:55:14+00:00 app[web.1]: cache: [GET /assets/application-c9380e1ffe04fc49edf5ff3a5baa4777.css] miss
+2012-03-18T15:55:14+00:00 heroku[router]: GET tutoring.herokuapp.com/assets/application-0e40e48252da936c731dab1d23c7347a.js dyno=web.1 queue=0 wait=0ms service=5ms status=304 bytes=0
+2012-03-18T15:55:14+00:00 heroku[router]: GET tutoring.herokuapp.com/assets/application-c9380e1ffe04fc49edf5ff3a5baa4777.css dyno=web.1 queue=0 wait=0ms service=7ms status=304 bytes=0
+2012-03-18T15:55:28+00:00 app[web.1]: 
+2012-03-18T15:55:28+00:00 app[web.1]: 
+2012-03-18T15:55:28+00:00 app[web.1]: Started POST "/users" for 165.123.234.239 at 2012-03-18 15:55:28 +0000
+2012-03-18T15:55:28+00:00 app[web.1]: Processing by UsersController#create as HTML
+2012-03-18T15:55:28+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"KNn8kfn8aNoiTFSZBXCYDAk/2Ue//1SWt4I/cr4d9rw=", "user"=>{"name"=>"Pillow", "email"=>"pillow@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+2012-03-18T15:55:28+00:00 app[web.1]: Redirected to http://tutoring.herokuapp.com/users/1
+2012-03-18T15:55:28+00:00 app[web.1]: Completed 302 Found in 160ms (ActiveRecord: 11.7ms)
+2012-03-18T15:55:28+00:00 app[web.1]: cache: [POST /users] invalidate, pass
+2012-03-18T15:55:28+00:00 heroku[router]: POST tutoring.herokuapp.com/users dyno=web.1 queue=0 wait=0ms service=178ms status=302 bytes=103
+2012-03-18T15:55:28+00:00 app[web.1]: 
+2012-03-18T15:55:28+00:00 app[web.1]: 
+2012-03-18T15:55:28+00:00 app[web.1]: Started GET "/users/1" for 165.123.234.239 at 2012-03-18 15:55:28 +0000
+2012-03-18T15:55:28+00:00 app[web.1]: Processing by UsersController#show as HTML
+2012-03-18T15:55:28+00:00 app[web.1]:   Parameters: {"id"=>"1"}
+2012-03-18T15:55:28+00:00 app[web.1]:   Rendered users/_follow_form.html.erb (0.5ms)
+2012-03-18T15:55:28+00:00 app[web.1]:   Rendered users/show.html.erb within layouts/application (40.3ms)
+2012-03-18T15:55:28+00:00 app[web.1]:   Rendered layouts/_header.html.erb (1.9ms)
+2012-03-18T15:55:28+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.3ms)
+2012-03-18T15:55:28+00:00 app[web.1]: Completed 200 OK in 113ms (Views: 8.5ms | ActiveRecord: 39.7ms)
+2012-03-18T15:55:28+00:00 app[web.1]: cache: [GET /users/1] miss
+2012-03-18T15:55:28+00:00 heroku[router]: GET tutoring.herokuapp.com/users/1 dyno=web.1 queue=0 wait=0ms service=122ms status=200 bytes=2076
+2012-03-18T15:55:28+00:00 app[web.1]: cache: [GET /assets/application-c9380e1ffe04fc49edf5ff3a5baa4777.css] miss
+2012-03-18T15:55:28+00:00 heroku[router]: GET tutoring.herokuapp.com/assets/application-c9380e1ffe04fc49edf5ff3a5baa4777.css dyno=web.1 queue=0 wait=0ms service=5ms status=304 bytes=0
+2012-03-18T15:55:28+00:00 app[web.1]: cache: [GET /assets/application-0e40e48252da936c731dab1d23c7347a.js] miss
+2012-03-18T15:55:28+00:00 heroku[router]: GET tutoring.herokuapp.com/assets/application-0e40e48252da936c731dab1d23c7347a.js dyno=web.1 queue=0 wait=0ms service=8ms status=304 bytes=0
+2012-03-18T15:56:49+00:00 heroku[slugc]: Slug compilation started
+2012-03-18T15:57:23+00:00 heroku[api]: Release v22 created by amina.bouabdallah@gmail.com
+2012-03-18T15:57:23+00:00 heroku[api]: Deploy 684431a by amina.bouabdallah@gmail.com
+2012-03-18T15:57:23+00:00 heroku[web.1]: State changed from up to bouncing
+2012-03-18T15:57:23+00:00 heroku[web.1]: State changed from bouncing to created
+2012-03-18T15:57:23+00:00 heroku[web.1]: State changed from created to starting
+2012-03-18T15:57:23+00:00 heroku[slugc]: Slug compilation finished
+2012-03-18T15:57:25+00:00 heroku
+[web.1]: Stopping process with SIGTERM
+2012-03-18T15:57:25+00:00 app[web.1]: [2012-03-18 15:57:25] ERROR SignalException: SIGTERM
+2012-03-18T15:57:25+00:00 app[web.1]: 	/usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+2012-03-18T15:57:30+00:00 heroku[web.1]: Starting process with command `bundle exec rails server -p 17726`
+2012-03-18T15:57:35+00:00 heroku[web.1]: Error R12 (Exit timeout) -> Process failed to exit within 10 seconds of SIGTERM
+2012-03-18T15:57:35+00:00 heroku[web.1]: Stopping process with SIGKILL
+2012-03-18T15:57:37+00:00 heroku[web.1]: Process exited with status 137
+2012-03-18T15:57:38+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2012-03-18T15:57:38+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2012-03-18T15:57:48+00:00 app[web.1]: [2012-03-18 15:57:48] INFO  WEBrick 1.3.1
+2012-03-18T15:57:48+00:00 app[web.1]: [2012-03-18 15:57:48] INFO  ruby 1.9.2 (2011-07-09) [x86_64-linux]
+2012-03-18T15:57:48+00:00 app[web.1]: [2012-03-18 15:57:48] INFO  WEBrick::HTTPServer#start: pid=1 port=17726
+2012-03-18T15:57:49+00:00 heroku[web.1]: State changed from starting to up
+2012-03-18T15:57:51+00:00 app[web.1]: => Booting WEBrick
+2012-03-18T15:57:51+00:00 app[web.1]: => Rails 3.2.1 application starting in production on http://0.0.0.0:17726
+2012-03-18T15:57:51+00:00 app[web.1]: => Ctrl-C to shutdown server
+2012-03-18T15:57:51+00:00 app[web.1]: 
+2012-03-18T15:57:51+00:00 app[web.1]: Started GET "/" for 165.123.234.239 at 2012-03-18 15:57:51 +0000
+2012-03-18T15:57:51+00:00 app[web.1]: 
+2012-03-18T15:57:51+00:00 app[web.1]: => Call with -d to detach
+2012-03-18T15:57:51+00:00 app[web.1]: Processing by PagesController#home as HTML
+2012-03-18T15:57:52+00:00 app[web.1]:   Rendered shared/_user_info.html.erb (32.6ms)
+2012-03-18T15:57:52+00:00 app[web.1]:   Rendered shared/_stats.html.erb (14.6ms)
+2012-03-18T15:57:52+00:00 app[web.1]:   Rendered shared/_error_messages.html.erb (0.4ms)
+2012-03-18T15:57:52+00:00 app[web.1]:   Rendered shared/_micropost_form.html.erb (4.1ms)
+2012-03-18T15:57:52+00:00 app[web.1]:   Rendered shared/_feed.html.erb (68.9ms)
+2012-03-18T15:57:52+00:00 app[web.1]:   Rendered pages/home.html.erb within layouts/application (141.9ms)
+2012-03-18T15:57:52+00:00 app[web.1]: Completed 500 Internal Server Error in 510ms
+2012-03-18T15:57:52+00:00 app[web.1]: 
+2012-03-18T15:57:52+00:00 app[web.1]:     1: <% if @feed_items.any? %>
+2012-03-18T15:57:52+00:00 app[web.1]:     2:   <ol class="microposts">
+2012-03-18T15:57:52+00:00 app[web.1]:     4:   </ol>
+2012-03-18T15:57:52+00:00 app[web.1]:     3:     <%= render partial: 'shared/feed_item', collection: @feed_items %>
+2012-03-18T15:57:52+00:00 app[web.1]: ActionView::Template::Error (PG::Error: ERROR:  invalid input syntax for integer: ""
+2012-03-18T15:57:52+00:00 app[web.1]: : SELECT COUNT(*) FROM "microposts"  WHERE (user_id IN ('') OR user_id = 1)):
+2012-03-18T15:57:52+00:00 app[web.1]:   app/views/shared/_feed.html.erb:1:in `_app_views_shared__feed_html_erb__2733685618443816735_27917500'
+2012-03-18T15:57:52+00:00 app[web.1]:   app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___476570944892272723_41458560'
+2012-03-18T15:57:52+00:00 app[web.1]: 
+2012-03-18T15:57:52+00:00 app[web.1]: 
+2012-03-18T15:57:52+00:00 app[web.1]: cache: [GET /] miss
+2012-03-18T15:57:52+00:00 heroku[router]: GET tutoring.herokuapp.com/ dyno=web.1 queue=0 wait=0ms service=636ms status=500 bytes=728
