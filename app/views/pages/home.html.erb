@@ -1,25 +1,32 @@
 
 	
 	
-	<% if signed_in? %>
-	<table class="front">
-		<tr>
-			
-			<td class="main">
-				<h1 class="micropost">What's up?</h1>
-				<%= render 'shared/micropost_form' %>
-				<%= render 'shared/feed' %>
-				 
-			<td>
-			
-			<td class="sidebar round">
-				<%= render 'shared/user_info' %>
-				<%= render 'shared/stats' %>
-			</td>
-		</tr>
-	</table>
+<% if signed_in? %>
 	
-	<% else %>
-	<h1> HOME PAGE </h1>
-	<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+		<%= render 'shared/stats' %>
+      </section>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+	
+	<div class="span8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+	
+  </div>
+	
+<% else %>
+	<div class="center hero-unit">
+		<h1>Welcome to Move UTC</h1>
+		<h2>You're this close to finding a ride !</h2>
+		<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+	</div>
 	<% end %>
+	
+	

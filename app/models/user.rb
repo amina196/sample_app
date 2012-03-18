@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
 	end
 	
 	def feed
-		Micropost.where("user_id = ?",id) #id is properly escaped before being included in the underlying SQL query, at this point this is equivalent to "microposts"
+		Micropost.from_users_followed_by(self) #id is properly escaped before being included in the underlying SQL query, at this point this is equivalent to "microposts"
 	end
 	
 	#follow! method calls create! through the relationships association to create the following relationship
