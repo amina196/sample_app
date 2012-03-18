@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 == Welcome ! 
+=======
+== Welcome to Rails
+
+>>>>>>> following-users
 
 This repository contains the files to the application that I am building, using the Ruby on Rails framework.
 

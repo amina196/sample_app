@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   before_filter :signed_in_user, only: [:index,:edit, :show, :update]
   before_filter :correct_user, only: [:edit, :show, :update]
   before_filter :admin_user, only: :destroy
+  before_filter :signed_in_user, 
+                only: [:index, :edit, :update, :following, :followers]
   
   def index
 	  @users = User.paginate(page: params[:page])
@@ -50,6 +52,17 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
+  def following
+	@name = current_user.name
+    @begtitle = "Users following"
+	@title = "#{@begtitle} #{@name}"
+  end
+
+  def followers
+    @name = current_user.name
+    @begtitle = "Users followed by"
+	@title = "#{@begtitle} #{@name}"
+  end
   
   private
 	#signed_in_user method in the Sessions helper

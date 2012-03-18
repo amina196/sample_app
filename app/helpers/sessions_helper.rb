@@ -23,6 +23,10 @@ module SessionsHelper
 		#but on subsequent invocations returns @current_user without calling user_from_remember_token.7
 	end
 	
+	def current_user?(user)
+    user == current_user
+  end
+	
 	def redirect_back_or(default)
 		redirect_to(session[:return_to] || default) #evaluates to session[:return_to] unless it is nil 
 		clear_return_to
