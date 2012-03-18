@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   #to prevent access to edit/update actions of any user if the click doesn't come from a signed-in user
-  before_filter :signed_in_user, only: [:index,:edit, :show, :update]
-  before_filter :correct_user, only: [:edit, :show, :update]
+  before_filter :signed_in_user, only: [:index,:edit,:show,:update]
+  before_filter :correct_user, only: [:edit, :update]
   before_filter :admin_user, only: :destroy
   before_filter :signed_in_user, 
                 only: [:index, :edit, :update, :following, :followers]
@@ -37,6 +37,7 @@ class UsersController < ApplicationController
 		sign_in @user
 		redirect_back_or @user
 	else
+		sign_out 
 		render 'edit' 
 	end
   end
@@ -52,16 +53,18 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
-  def following
-	@name = current_user.name
-    @begtitle = "Users following"
-	@title = "#{@begtitle} #{@name}"
+def following
+    @title = "Following"
+    @user = User.find(params[:id])
+    @users = @user.followed_users.paginate(page: params[:page])
+    render 'show_follow'
   end
 
   def followers
-    @name = current_user.name
-    @begtitle = "Users followed by"
-	@title = "#{@begtitle} #{@name}"
+    @title = "Followers"
+    @user = User.find(params[:id])
+    @users = @user.followers.paginate(page: params[:page])
+    render 'show_follow'
   end
   
   private

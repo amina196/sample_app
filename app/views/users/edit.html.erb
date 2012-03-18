@@ -1,5 +1,6 @@
 <h1>Edit user </h1>
-
+<div class="row">
+  <div class="span6 offset3">
 <%= form_for(@user) do |f| %>
 	
 <%= render 'shared/error_messages', object: f.object %>
@@ -23,11 +24,9 @@
     <%= f.label :password_confirmation, "Confirmation" %><br />
     <%= f.password_field :password_confirmation %>
   </div>
-  
-
 
   <div class="actions">
-    <%= f.submit "Update information" %>
+    <%= f.submit "Update information", :class => "btn btn-large btn-primary" %>
   </div>
   
   
@@ -36,3 +35,5 @@
   <a href="http://gravatar.com/emails">change</a>
 </div>
 <% end %>
+
+  </div>  </div>
