@@ -4,7 +4,6 @@ namespace :db do
     Rake::Task['db:reset'].invoke
     make_users
     make_microposts
-    make_relationships
   end
 end
 
@@ -15,23 +14,23 @@ def make_users
                        password: "foobar",
                        password_confirmation: "foobar")
   admin.toggle!(:admin)
-  99.times do |n|
-    name  = Faker::Name.name
-    email = "example-#{n+1}@gmail.com"
-    password  = "password"
-    User.create!(name:     name,
-                 email:    email,
-                 password: password,
-                 password_confirmation: password)
+  
+    User.create!(name:     "Nabil Bouabdallah",
+                 email:    "nabil@gmail.com",
+                 password: "foobar",
+                 password_confirmation: "foobar")
+	
+	User.create!(name:     "Nawel Bouabdallah",
+                 email:    "nawel@gmail.com",
+                 password: "foobar",
+                 password_confirmation: "foobar")
   end
 end
 
 
 def make_microposts
-  users = User.all(limit: 6)
-  50.times do
-    content = Faker::Lorem.sentence(5)
-    users.each { |user| user.microposts.create!(content: content) }
+  users = User.all
+  users.each { |user| user.microposts.create!(content: "Glad I joined", start_town: "Compiegne", start_location: "Mairie", drop_town: "Paris", drop_location: "Mairie", date: "12 mars 2012", nb_passengers: "4") }
   end
 end
 

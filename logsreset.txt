@@ -1,0 +1,30 @@
+Running rake db:reset attached to terminal... up, run.1
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/Rakefile:7)
+Couldn't drop nljlpzuhfo : #<ActiveRecord::StatementInvalid: PG::Error: ERROR:  must be owner of database nljlpzuhfo
+: DROP DATABASE IF EXISTS "nljlpzuhfo">
+nljlpzuhfo already exists
+-- create_table("microposts", {:force=>true})
+   -> 0.3454s
+-- add_index("microposts", ["user_id", "created_at"], {:name=>"index_microposts_on_user_id_and_created_at"})
+   -> 0.0468s
+-- create_table("relationships", {:force=>true})
+   -> 0.0747s
+-- add_index("relationships", ["followed_id"], {:name=>"index_relationships_on_followed_id"})
+   -> 0.0991s
+-- add_index("relationships", ["follower_id", "followed_id"], {:name=>"index_relationships_on_follower_id_and_followed_id"})
+   -> 0.1749s
+-- add_index("relationships", ["follower_id"], {:name=>"index_relationships_on_follower_id"})
+   -> 0.0161s
+-- create_table("searches", {:force=>true})
+   -> 0.1927s
+-- create_table("users", {:force=>true})
+   -> 0.1677s
+-- add_index("users", ["email"], {:name=>"index_users_on_email", :unique=>true})
+   -> 0.0293s
+-- add_index("users", ["remember_token"], {:name=>"index_users_on_remember_token"})
+   -> 0.0103s
+-- initialize_schema_migrations_table()
+   -> 0.0058s
+-- assume_migrated_upto_version(20120323021055, ["/app/db/migrate"])
+   -> 0.0033s
