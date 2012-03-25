@@ -25,7 +25,6 @@ def make_users
                  password: "foobar",
                  password_confirmation: "foobar")
   end
-end
 
 
 def make_microposts
