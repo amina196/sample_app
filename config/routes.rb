@@ -1,14 +1,17 @@
 SampleApp::Application.routes.draw do
-resources :users do #adds many routes, cf table in chapter 7, Adding followed_users and followers actions to the Users controller. 
+ 
+  
+ resources :users do #adds many routes, cf table in chapter 7, Adding followed_users and followers actions to the Users controller. 
     member do
       get :following, :followers
     end
-  end 
-	
+ end 
 	
 	resources :sessions, only: [:new, :create, :destroy]
-	resources :microposts, only: [:create, :destroy]
+	resources :microposts, only: [:index, :create, :destroy] 
 	resources :relationships, only: [:create, :destroy]
+	resources :searches
+	
 	
   match'/signup', to: 'users#new'
   match '/contact', to: 'pages#contact'
@@ -17,6 +20,7 @@ resources :users do #adds many routes, cf table in chapter 7, Adding followed_us
    match '/signup', to: 'pages#signup'
    match '/signin', to: 'sessions#new'
    match '/signout', to: 'sessions#destroy'
+   match '/microposts', to: 'microposts#index'
    
   root to: 'pages#home'
 

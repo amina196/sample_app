@@ -1,0 +1,13 @@
+<h1> Micropost search </h1>
+
+<%= form_tag microposts_path, method: 'get' do %>
+	<p>
+		<%= text_field_tag :search, params[:search]%>
+		<%= submit_tag "Search", name: nil %>
+	</p>
+<% end %>
+
+<ol class="microposts">
+	<%= render partial: 'shared/feed_item', collection: @microposts %>
+</ol>
+

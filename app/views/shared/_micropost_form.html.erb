@@ -1,9 +1,33 @@
 
-
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+    <%= f.label :start_town %><br />
+    <%= f.text_field :start_town %>
+  </div>
+  <div class="field">
+    <%= f.label :start_location %><br />
+    <%= f.text_field :start_location %>
+  </div>
+  <div class="field">
+    <%= f.label :drop_town %><br />
+    <%= f.text_field :drop_town %>
+  </div>
+  <div class="field">
+    <%= f.label :drop_location %><br />
+    <%= f.text_field :drop_location %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.text_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :nb_passengers %><br />
+    <%= f.number_field :nb_passengers %>
+  </div>
+  <div class="field">
+    <%= f.text_field :content, placeholder: "Commentaire ?" %>
   </div>
   <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 <% end %>
+

@@ -1,11 +1,19 @@
 class Micropost < ActiveRecord::Base
-	attr_accessible :content
+	attr_accessible :content, :start_location, :start_town, :drop_town, :drop_location, :date, :nb_passengers
 	belongs_to :user
-	validates :content, presence: true, length: {maximum: 140}
+	#validates :content, presence: true, length: {maximum: 140}
 	default_scope order: 'microposts.created_at DESC' #order the microposts, most recent first
 	
 	def self.from_users_followed_by(user)
     followed_user_ids = user.followed_user_ids
     where("user_id IN (?) OR user_id = ?", followed_user_ids, user)
+  end
+  
+  def self.search(search)
+	if search
+		find(:all, :conditions => ['start_town LIKE ?', "%#{search}%"])
+	else
+		find(:all)
+	end
   end
 end
