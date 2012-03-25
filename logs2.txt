@@ -1,0 +1,102 @@
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/initializable.rb:30:in `run'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/application.rb:136:in `initialize!'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/initializable.rb:54:in `run_initializers'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:51:in `initialize'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/config.ru:4:in `block in <main>'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/config/environment.rb:5:in `<top (required)>'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/config.ru:4:in `require'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:51:in `instance_eval'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands/server.rb:46:in `app'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/server.rb:200:in `app'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/config.ru:1:in `<main>'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/config.ru:1:in `new'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/server.rb:252:in `start'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:55:in `block in <top (required)>'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:40:in `parse_file'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:40:in `eval'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands/server.rb:70:in `start'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/server.rb:301:in `wrapped_app'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:50:in `tap'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:50:in `<top (required)>'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from script/rails:6:in `require'
+2012-03-25T21:31:51+00:00 app[web.1]: 	from script/rails:6:in `<main>'
+2012-03-25T21:31:51+00:00 app[web.1]: => Booting WEBrick
+2012-03-25T21:31:51+00:00 app[web.1]: => Call with -d to detach
+2012-03-25T21:31:51+00:00 app[web.1]: => Ctrl-C to shutdown server
+2012-03-25T21:31:51+00:00 app[web.1]: Exiting
+2012-03-25T21:31:51+00:00 app[web.1]: => Rails 3.2.1 application starting in production on http://0.0.0.0:59833
+2012-03-25T21:31:52+00:00 heroku[web.1]: Process exited with status 1
+2012-03-25T21:31:53+00:00 heroku[web.1]: State changed from starting to crashed
+2012-03-25T21:32:39+00:00 heroku[slugc]: Slug compilation started
+2012-03-25T21:32:58+00:00 heroku[api]: Release v31 created by amina.bouabdallah@gmail.com
+2012-03-25T21:32:58+00:00 heroku[api]: Deploy 8f421dd by amina.bouabdallah@gmail.com
+2012-03-25T21:32:59+00:00 heroku[web.1]: State changed from crashed to created
+2012-03-25T21:32:59+00:00 heroku[web.1]: State changed from created to starting
+2012-03-25T21:32:59+00:00 heroku[slugc]: Slug compilation finished
+2012-03-25T21:33:05+00:00 heroku[web.1]: Starting process with command `bundle exec rails server -p 32017`
+2012-03-25T21:33:09+00:00 app[web.1]: /app/config.ru:4:in `require': /app/config/environment.rb:11: syntax error, unexpected tSYMBEG, expecting '}' (SyntaxError)
+2012-03-25T21:33:09+00:00 app[web.1]: 	from /app/config.ru:4:in `block in <main>'
+2012-03-25T21:33:09+00:00 app[web.1]:    ^
+2012-03-25T21:33:09+00:00 app[web.1]:   :password => ENV["SENDGRID_PASSWORD"],
+2012-03-25T21:33:09+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:51:in `instance_eval'
+2012-03-25T21:33:09+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:51:in `initialize'
+2012-03-25T21:33:09+00:00 app[web.1]: 	from /app/config.ru:1:in `new'
+2012-03-25T21:33:09+00:00 app[web.1]: 	from /app/config.ru:1:in `<main>'
+2012-03-25T21:33:09+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:40:in `parse_file'
+2012-03-25T21:33:09+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:40:in `eval'
+2012-03-25T21:33:09+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/server.rb:200:in `app'
+2012-03-25T21:33:09+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands/server.rb:46:in `app'
+2012-03-25T21:33:09+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/server.rb:301:in `wrapped_app'
+2012-03-25T21:33:09+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/server.rb:252:in `start'
+2012-03-25T21:33:09+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands/server.rb:70:in `start'
+2012-03-25T21:33:09+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:55:in `block in <top (required)>'
+2012-03-25T21:33:09+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:50:in `tap'
+2012-03-25T21:33:09+00:00 app[web.1]: 	from script/rails:6:in `require'
+2012-03-25T21:33:09+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:50:in `<top (required)>'
+2012-03
+-25T21:33:09+00:00 app[web.1]: 	from script/rails:6:in `<main>'
+2012-03-25T21:33:09+00:00 app[web.1]: => Booting WEBrick
+2012-03-25T21:33:09+00:00 app[web.1]: => Rails 3.2.1 application starting in production on http://0.0.0.0:32017
+2012-03-25T21:33:09+00:00 app[web.1]: => Call with -d to detach
+2012-03-25T21:33:09+00:00 app[web.1]: => Ctrl-C to shutdown server
+2012-03-25T21:33:09+00:00 app[web.1]: Exiting
+2012-03-25T21:33:10+00:00 heroku[web.1]: Process exited with status 1
+2012-03-25T21:33:10+00:00 heroku[web.1]: State changed from starting to crashed
+2012-03-25T21:33:25+00:00 heroku[router]: Error H10 (App crashed) -> GET tutoring.herokuapp.com/ dyno= queue= wait= service= status=503 bytes=
+2012-03-25T21:35:29+00:00 heroku[slugc]: Slug compilation started
+2012-03-25T21:35:49+00:00 heroku[api]: Release v32 created by amina.bouabdallah@gmail.com
+2012-03-25T21:35:49+00:00 heroku[api]: Deploy 223a771 by amina.bouabdallah@gmail.com
+2012-03-25T21:35:49+00:00 heroku[web.1]: State changed from crashed to created
+2012-03-25T21:35:49+00:00 heroku[web.1]: State changed from created to starting
+2012-03-25T21:35:50+00:00 heroku[slugc]: Slug compilation finished
+2012-03-25T21:35:56+00:00 heroku[web.1]: Starting process with command `bundle exec rails server -p 13636`
+2012-03-25T21:36:00+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:51:in `initialize'
+2012-03-25T21:36:00+00:00 app[web.1]: 	from /app/config.ru:4:in `block in <main>'
+2012-03-25T21:36:00+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:51:in `instance_eval'
+2012-03-25T21:36:00+00:00 app[web.1]: /app/config.ru:4:in `require': /app/config/environment.rb:7: syntax error, unexpected '}', expecting $end (SyntaxError)
+2012-03-25T21:36:00+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:40:in `eval'
+2012-03-25T21:36:00+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/server.rb:200:in `app'
+2012-03-25T21:36:00+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands/server.rb:46:in `app'
+2012-03-25T21:36:00+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/server.rb:301:in `wrapped_app'
+2012-03-25T21:36:00+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/server.rb:252:in `start'
+2012-03-25T21:36:00+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands/server.rb:70:in `start'
+2012-03-25T21:36:00+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:40:in `parse_file'
+2012-03-25T21:36:00+00:00 app[web.1]: 	from /app/config.ru:1:in `<main>'
+2012-03-25T21:36:00+00:00 app[web.1]: 	from script/rails:6:in `require'
+2012-03-25T21:36:00+00:00 app[web.1]: 	from script/rails:6:in `<main>'
+20
+12-03-25T21:36:00+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:55:in `block in <top (required)>'
+2012-03-25T21:36:00+00:00 app[web.1]: 	from /app/config.ru:1:in `new'
+2012-03-25T21:36:00+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:50:in `tap'
+2012-03-25T21:36:00+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:50:in `<top (required)>'
+2012-03-25T21:36:00+00:00 app[web.1]: => Booting WEBrick
+2012-03-25T21:36:00+00:00 app[web.1]: => Rails 3.2.1 application starting in production on http://0.0.0.0:13636
+2012-03-25T21:36:00+00:00 app[web.1]: => Call with -d to detach
+2012-03-25T21:36:00+00:00 app[web.1]: => Ctrl-C to shutdown server
+2012-03-25T21:36:00+00:00 app[web.1]: Exiting
+2012-03-25T21:36:01+00:00 heroku[web.1]: Process exited with status 1
+2012-03-25T21:36:01+00:00 heroku[web.1]: State changed from starting to crashed
+2012-03-25T21:36:09+00:00 heroku[router]: Error H10 (App crashed) -> GET tutoring.herokuapp.com/ dyno= queue= wait= service= status=503 bytes=
+2012-03-25T21:36:13+00:00 heroku[router]: Error H10 (App crashed) -> GET tutoring.herokuapp.com/ dyno= queue= wait= service= status=503 bytes=
