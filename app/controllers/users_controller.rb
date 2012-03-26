@@ -17,6 +17,7 @@ class UsersController < ApplicationController
   def create
 	@user = User.new(params[:user]) #params[:user] visible dans le corps de la requete HTTP = hash with all the values of all the attributes of the user model ! => create a user out of the hash
     if @user.save
+		UserMailer.welcome_email(@user).deliver
 		sign_in @user
 		flash[:success] = "Welcome to the sample app ! "
 		redirect_to @user  #it tells the browser to send a new request for a different URL, the newly created user’s profile
