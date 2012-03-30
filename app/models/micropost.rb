@@ -1,7 +1,12 @@
 class Micropost < ActiveRecord::Base
 	attr_accessible :content, :start_location, :start_town, :drop_town, :drop_location, :date, :nb_passengers, :id
 	belongs_to :user
-	belongs_to :passenger_ride
+
+	#needed to have user.rides array
+	has_many :passenger_rides, foreign_key: "ride_id", dependent: :destroy
+	
+	has_many :passengers, through: :passenger_rides
+
 	#validates :content, presence: true, length: {maximum: 140}
 	default_scope order: 'microposts.created_at DESC' #order the microposts, most recent first
 	
