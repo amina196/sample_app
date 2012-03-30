@@ -12,6 +12,13 @@
     </strong>
     followers
   </a>
+  <a href="<%= rides_user_path(@user) %>">
+    <strong id="rides" class="stat">
+      <%= @user.rides.count %>
+    </strong>
+    rides
+  </a>
+
 </div>
 
 

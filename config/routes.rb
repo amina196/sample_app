@@ -3,13 +3,14 @@ SampleApp::Application.routes.draw do
   
  resources :users do #adds many routes, cf table in chapter 7, Adding followed_users and followers actions to the Users controller. 
     member do
-      get :following, :followers
+      get :following, :followers, :rides
     end
  end 
 	
 	resources :sessions, only: [:new, :create, :destroy]
-	resources :microposts, only: [:index, :create, :destroy] 
+	resources :microposts, only: [:new, :index, :create, :destroy] 
 	resources :relationships, only: [:create, :destroy]
+  resources :passenger_rides, only: [:create, :destroy]
 	resources :searches
 	
 	

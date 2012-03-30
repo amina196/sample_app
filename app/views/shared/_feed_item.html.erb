@@ -5,8 +5,9 @@
   <span class="content">RIDES ON : <%= feed_item.date %></span>
   <span class="content">Leaving from : <%= feed_item.start_town %> - <%= feed_item.start_location %></span>
   <span class="content">Dropping at : <%= feed_item.drop_town %> - <%= feed_item.drop_location %></span>
-  <span class="content">Can take : <%= feed_item.nb_passengers %> passengers</span>
+  <span class="content">Available seats : <%= feed_item.nb_passengers %> seats</span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
   </span>
+  <%= render 'microposts/ride_form'%>
 </li>

@@ -1,4 +1,20 @@
-<h1> Search a ride</h1>
+<div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+	  <section>
+        <%= render 'shared/stats' %>
+      </section>
+	  <section>
+        <%= link_to "Search for a ride", new_search_path %> <br/>
+		<%= link_to "Post a ride", new_micropost_path %>
+      </section>
+	</aside>
 
-<%= render 'form' %>
 
+	<div class="span8">
+      <h3>Search a ride</h3>
+      <%= render 'form' %>
+	</div>
+</div>

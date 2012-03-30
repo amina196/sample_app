@@ -18,7 +18,7 @@
     <%= render 'follow_form' if signed_in? %>
 	
     <% if @user.microposts.any? %>
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <h3> My Rides  (<%= @user.microposts.count %>)</h3>
       <ol class="microposts">
         <%= render partial: 'shared/feed_item', collection: @microposts %> 
       </ol>

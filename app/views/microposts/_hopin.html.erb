@@ -1,0 +1,4 @@
+<%= form_for(current_user.rides.build(ride_id: @micropost.id)) do |f| %>
+  <div><%= f.hidden_field :ride_id %></div>
+  <%= f.submit "Hop in", :class => "btn btn-large btn-primary" %>
+<% end %>

@@ -3,7 +3,11 @@ before_filter :signed_in_user #only: [:create, :destroy] : useless because these
 before_filter :correct_user, only: [:destroy]
 	
 	def index
-		@microposts = Micropost.search(params[:search])
+		@micropost = Micropost.search(params[:search])
+	end
+	
+	def new
+		@micropost = current_user.microposts.build
 	end
 	
 	def create

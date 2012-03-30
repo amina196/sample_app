@@ -1,6 +1,7 @@
 class Micropost < ActiveRecord::Base
-	attr_accessible :content, :start_location, :start_town, :drop_town, :drop_location, :date, :nb_passengers
+	attr_accessible :content, :start_location, :start_town, :drop_town, :drop_location, :date, :nb_passengers, :id
 	belongs_to :user
+	belongs_to :passenger_ride
 	#validates :content, presence: true, length: {maximum: 140}
 	default_scope order: 'microposts.created_at DESC' #order the microposts, most recent first
 	
