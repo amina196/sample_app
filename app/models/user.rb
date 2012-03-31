@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-	attr_accessible :name, :email, :password, :password_confirmation
+	#attr_accessible :name, :email, :password, :password_confirmation
 	has_secure_password
 
 #associations
@@ -81,9 +81,6 @@ class User < ActiveRecord::Base
 	def jump_off!(ride)
 		self.passenger_rides.find_by_ride_id(ride.id).destroy
 	end
-	
-	def assign_ride_id(ride)
-		self.rides.build(ride_id: ride.id)
-	end
+
 	
 end

@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_filter :correct_user, only: [:edit, :update]
   before_filter :admin_user, only: :destroy
   before_filter :signed_in_user, 
-                only: [:index, :edit, :update, :following, :followers]
+                only: [:index, :edit, :update, :following, :followers, :rides]
   
   def index
 	  @users = User.paginate(page: params[:page])
@@ -68,7 +68,12 @@ def following
     render 'show_follow'
   end
   
-  
+  def rides
+    @title = "Rides"
+    @user = User.find(params[:id])
+    @rides = @user.rides.paginate(page: params[:page])
+    render 'show_rides'
+  end
 
 
   private

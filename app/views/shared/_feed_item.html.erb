@@ -12,13 +12,13 @@
 
 
   <%if current_user.hopped_in?(feed_item) %>
-      <%= form_for(current_user.rides.find_by_ride_id(feed_item.id),
+      <%= form_for(current_user.passenger_rides.find_by_ride_id(feed_item.id),
              html: { method: :delete }) do |f| %>
       <%= f.submit "Jump off", :class => "btn btn-large" %>
       <% end %>
  
  <% else %>
-    <%= form_for(current_user.rides.build(ride_id: feed_item.id)) do |f| %>
+    <%= form_for(current_user.passenger_rides.build(ride_id: feed_item.id)) do |f| %>
      <div><%= f.hidden_field :ride_id %></div>
         <%= f.submit "Hop in", :class => "btn btn-large btn-primary" %>     
   <% end %>
