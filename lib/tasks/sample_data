@@ -1,0 +1,15 @@
+namespace :db do
+  desc "Fill database with sample data"
+  task populate: :environment do
+      admin = User.find_by_id(1)
+      admin.toggle!(:admin)
+      rides = Micropost.all
+      users  = User.all
+      user = users.first
+      rides.each { |ride| user.hop_in!(ride) }
+  end
+end
+
+
+  
+  

@@ -4,12 +4,20 @@ class User < ActiveRecord::Base
 	has_secure_password
 
 #associations
-	has_many :microposts, dependent: :destroy #has_many rides
+	has_many :microposts, dependent: :destroy #has_many rides --- used for the one to many 
+											  #relationship between user and micropost (which is
+											  #really a driver and a ride: a ride has one driver)
 
-	#needed to have user.rides array
-	has_many :passenger_rides, foreign_key: "passenger_id", dependent: :destroy
-	has_many :rides, through: :passenger_rides
 	
+	#needed to have user.rides array ie the lists of rides where the user appears as a passenger
+	has_many :passenger_rides, foreign_key: "passenger_id", 
+							   dependent: :destroy
+	has_many :rides, through: :passenger_rides, class_name: "Micropost"
+	
+	
+
+
+
 	#needed to have user.followed_users	array
 	has_many :relationships, foreign_key: "follower_id", #what identifies a user in the relationship table is the follower_id attribute
 							 dependent: :destroy # if a user is destroyed we want his relationships to be destroyed too 
@@ -74,5 +82,8 @@ class User < ActiveRecord::Base
 		self.passenger_rides.find_by_ride_id(ride.id).destroy
 	end
 	
+	def assign_ride_id(ride)
+		self.rides.build(ride_id: ride.id)
+	end
 	
 end

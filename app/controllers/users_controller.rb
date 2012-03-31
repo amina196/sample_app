@@ -68,6 +68,9 @@ def following
     render 'show_follow'
   end
   
+  
+
+
   private
 	#signed_in_user method in the Sessions helper
 	

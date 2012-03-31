@@ -4,8 +4,7 @@ class Micropost < ActiveRecord::Base
 
 	#needed to have user.rides array
 	has_many :passenger_rides, foreign_key: "ride_id", dependent: :destroy
-	
-	has_many :passengers, through: :passenger_rides
+	has_many :passengers, through: :passenger_rides, source: :passenger, class_name: "User"
 
 	#validates :content, presence: true, length: {maximum: 140}
 	default_scope order: 'microposts.created_at DESC' #order the microposts, most recent first
