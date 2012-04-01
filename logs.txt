@@ -1,102 +1,101 @@
-2012-03-25T21:42:12+00:00 app[web.1]: => Booting WEBrick
-2012-03-25T21:42:12+00:00 app[web.1]: => Rails 3.2.1 application starting in production on http://0.0.0.0:55988
-2012-03-25T21:42:12+00:00 app[web.1]: => Call with -d to detach
-2012-03-25T21:42:12+00:00 app[web.1]: => Ctrl-C to shutdown server
-2012-03-25T21:42:12+00:00 app[web.1]: Exiting
-2012-03-25T21:42:13+00:00 heroku[web.1]: Process exited with status 1
-2012-03-25T21:42:13+00:00 heroku[web.1]: State changed from starting to crashed
-2012-03-25T21:42:24+00:00 heroku[api]: Release v34 created by amina.bouabdallah@gmail.com
-2012-03-25T21:42:24+00:00 heroku[api]: Deploy fe51167 by amina.bouabdallah@gmail.com
-2012-03-25T21:42:24+00:00 heroku[web.1]: State changed from crashed to created
-2012-03-25T21:42:24+00:00 heroku[web.1]: State changed from created to starting
-2012-03-25T21:42:30+00:00 heroku[web.1]: Starting process with command `bundle exec rails server -p 5538`
-2012-03-25T21:42:32+00:00 heroku[slugc]: Slug compilation finished
-2012-03-25T21:42:33+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
-2012-03-25T21:42:33+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
-2012-03-25T21:42:37+00:00 app[web.1]: [2012-03-25 21:42:37] INFO  WEBrick 1.3.1
-2012-03-25T21:42:37+00:00 app[web.1]: [2012-03-25 21:42:37] INFO  ruby 1.9.2 (2011-07-09) [x86_64-linux]
-2012-03-25T21:42:37+00:00 app[web.1]: [2012-03-25 21:42:37] INFO  WEBrick::HTTPServer#start: pid=1 port=5538
-2012-03-25T21:42:38+00:00 heroku[web.1]: State changed from starting to up
-2012-03-25T21:42:40+00:00 app[web.1]: => Booting WEBrick
-2012-03-25T21:42:40+00:00 app[web.1]: => Rails 3.2.1 application starting in production on http://0.0.0.0:5538
-2012-03-25T21:42:40+00:00 app[web.1]: => Call with -d to detach
-2012-03-25T21:42:40+00:00 app[web.1]: => Ctrl-C to shutdown server
-2012-03-25T21:42:40+00:00 app[web.1]: 
-2012-03-25T21:42:40+00:00 app[web.1]: 
-2012-03-25T21:42:40+00:00 app[web.1]: Started GET "/" for 165.123.234.198 at 2012-03-25 21:42:40 +0000
-2012-03-25T21:42:40+00:00 app[web.1]: Processing by PagesController#home as HTML
-2012-03-25T21:42:40+00:00 app[web.1]:   Rendered shared/_user_info.html.erb (5.1ms)
-2012-03-25T21:42:40+00:00 app[web.1]:   Rendered shared/_stats.html.erb (64.6ms)
-2012-03-25T21:4
-2:40+00:00 app[web.1]:   Rendered shared/_feed.html.erb (2.9ms)
-2012-03-25T21:42:40+00:00 app[web.1]:   Rendered shared/_error_messages.html.erb (0.3ms)
-2012-03-25T21:42:40+00:00 app[web.1]:   Rendered shared/_micropost_form.html.erb (31.1ms)
-2012-03-25T21:42:40+00:00 app[web.1]:   Rendered pages/home.html.erb within layouts/application (147.2ms)
-2012-03-25T21:42:40+00:00 app[web.1]: Completed 500 Internal Server Error in 476ms
-2012-03-25T21:42:40+00:00 app[web.1]: 
-2012-03-25T21:42:40+00:00 app[web.1]:     5:     <title><%= title %></title>
-2012-03-25T21:42:40+00:00 app[web.1]:     7:     <%= javascript_include_tag "application" %>
-2012-03-25T21:42:40+00:00 app[web.1]: ActionView::Template::Error (application.js isn't precompiled):
-2012-03-25T21:42:40+00:00 app[web.1]:     4:   <head>
-2012-03-25T21:42:40+00:00 app[web.1]:     9:   </head>
-2012-03-25T21:42:40+00:00 app[web.1]:     6:     <%= csrf_meta_tag %>
-2012-03-25T21:42:40+00:00 app[web.1]:     10: 
-2012-03-25T21:42:40+00:00 app[web.1]:     8: 	<%= stylesheet_link_tag "application", media: "all"%>
-2012-03-25T21:42:40+00:00 app[web.1]:   app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___2277860697383842326_39592740'
-2012-03-25T21:42:40+00:00 app[web.1]: 
-2012-03-25T21:42:40+00:00 app[web.1]: 
-2012-03-25T21:42:40+00:00 app[web.1]: cache: [GET /] miss
-2012-03-25T21:42:40+00:00 heroku[router]: GET tutoring.herokuapp.com/ dyno=web.1 queue=0 wait=0ms service=588ms status=500 bytes=728
-2012-03-25T21:46:29+00:00 heroku[slugc]: Slug compilation started
-2012-03-25T21:46:48+00:00 heroku[api]: Release v35 created by amina.bouabdallah@gmail.com
-2012-03-25T21:46:48+00:00 heroku[api]: Deploy 2a4a3a2 by amina.bouabdallah@gmail.com
-2012-03-25T21:46:48+00:00 heroku[web.1]: State changed from up to bouncing
-2012-03-25T21:46:48+00:00 heroku[web.1]: State changed from bouncing to created
-2012-03-25T21:46:48+00:00 heroku[web.1]: State changed from created to starting
-2012-03-25T21:46:49+00:00 heroku[slugc]: Slug compilation finished
-2012-03-25T21:46:50+00:00 heroku[web.1]: Stopping process with SIGTERM
-2012-03-25T21:46:50+00:00 app[web.1]: [2012-03-25 21:46:50] ERROR SignalException: SIGTERM
-2012-03-25T21:46:50+00:00 app[web.1]: 	/usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
-2012-03-25T21:46:54+00:00 heroku[web.1]: Starting process with command `bundle exec rails server -p 56394`
-2012-03-25T21:46:57+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
-2012-03-25
-T21:46:57+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
-2012-03-25T21:46:57+00:00 app[web.1]: /app/config/environments/production.rb:1:in `<top (required)>': uninitialized constant DemoApp (NameError)
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/engine.rb:571:in `block in <class:Engine>'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/initializable.rb:30:in `instance_exec'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/initializable.rb:30:in `run'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/initializable.rb:55:in `block in run_initializers'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/initializable.rb:54:in `each'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/initializable.rb:54:in `run_initializers'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/application.rb:136:in `initialize!'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/railtie/configurable.rb:30:in `method_missing'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/config/environment.rb:5:in `<top (required)>'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/config.ru:4:in `require'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/config.ru:4:in `block in <main>'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:51:in `instance_eval'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:51:in `initialize'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/config.ru:1:in `new'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/config.ru:1:in `<main>'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:40:in `eval'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:40:in `parse_file'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/server.rb:200:in `app'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands/server.rb:46:in `app'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/server.rb:301:in `wrapped_app'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/server.rb:252:in `start'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands/server.rb:70:in `start'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:50:in `tap'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:55:in `block in <top (required)>'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands.rb:50:in `<top (required)>'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from script/rails:6:in `require'
-2012-03-25T21:46:57+00:00 app[web.1]: 	from script/rails:6:in `<main>'
-2012-03-25T21:46:57+00:00 app[web.1]: => Rails 3.2.1 application starting in production on http://0.0.0.0:56394
-2012-03-25T21:46:57+00:00 app[web.1]: => Booting WEBrick
-2012-03-25T21:46:57+00:00 app[web.1]: => Call with -d to detach
-2012-03-25T21:46:57+00:00 app[web.1]: => Ctrl-C to shutdown server
-2012-03-25T21:46:57+00:00 app[web.1]: Exiting
-2012-03-25T21:46:58+00:00 heroku[web.1]: Process exited with status 1
-2012-03-25T21:46:58+00:00 heroku[web.1]: State changed from starting to crashed
-2012-03-25T21:46:59+00:00 heroku[router]: Error H10 (App crashed) -> GET tutoring.herokuapp.com/ dyno= queue= wait= service= status=503 bytes=
-2012-03-25T21:47:00+00:00 heroku[web.1]: Stopping process with SIGKILL
-2012-03-25T21:47:00+00:00 heroku[web.1]: Error R12 (Exit timeout) -> Process failed to exit within 10 seconds of SIGTERM
-2012-03-25T21:47:02+00:00 heroku[web.1]: Process exited with status 137
+2012-03-31T21:52:03+00:00 app[web.1]:   Rendered layouts/_header.html.erb (1.2ms)
+2012-03-31T21:52:03+00:00 app[web.1]: Completed 200 OK in 353ms (Views: 65.7ms | ActiveRecord: 284.3ms)
+2012-03-31T21:52:03+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.3ms)
+2012-03-31T21:52:03+00:00 app[web.1]: cache: [GET /] miss
+2012-03-31T21:52:03+00:00 heroku[router]: GET tutoring.herokuapp.com/ dyno=web.1 queue=0 wait=0ms service=361ms status=200 bytes=3904
+2012-03-31T21:52:03+00:00 heroku[router]: GET tutoring.herokuapp.com/assets/application-240813fca9bd24c6c6c5238f8e29ea16.css dyno=web.1 queue=0 wait=0ms service=6ms status=304 bytes=0
+2012-03-31T21:52:03+00:00 app[web.1]: cache: [GET /assets/application-240813fca9bd24c6c6c5238f8e29ea16.css] miss
+2012-03-31T21:52:03+00:00 app[web.1]: cache: [GET /assets/application-055b8377542c3c07a32b854dd4494013.js] miss
+2012-03-31T21:52:03+00:00 heroku[router]: GET tutoring.herokuapp.com/assets/application-055b8377542c3c07a32b854dd4494013.js dyno=web.1 queue=0 wait=0ms service=6ms status=304 bytes=0
+2012-03-31T21:52:21+00:00 app[web.1]: 
+2012-03-31T21:52:21+00:00 app[web.1]: 
+2012-03-31T21:52:21+00:00 app[web.1]: Started GET "/users" for 165.123.234.207 at 2012-03-31 21:52:21 +0000
+2012-03-31T21:52:21+00:00 app[web.1]: Processing by UsersController#index as HTML
+2012-03-31T21:52:21+00:00 app[web.1]:   Rendered users/_user.html.erb (2.3ms)
+2012-03-31T21:52:21+00:00 app[web.1]:   Rendered users/index.html.erb within layouts/application (6.5ms)
+2012-03-31T21:52:21+00:00 app[web.1]:   Rendered layouts/_header.html.erb (1.0ms)
+2012-03-31T21:52:21+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.4ms)
+2012-03-31T21:52:21+00:00 app[web.1]: Completed 200 OK in 13ms (Views: 7.2ms | ActiveRecord: 4.7ms)
+2012-03-31T21:52:21+00:00 app[web.1]: cache: [GET /users] miss
+2012-03-31T21:52:21+00:00 heroku[router]: GET tutoring.herokuapp.com/users dyno=web.1 queue=0 wait=0ms service=21ms status=304 bytes=0
+2012-03-31T21:52:22+00:00 app[web.1]: 
+2012-03-31T21:52:22+00:00 app[web.1]: 
+2012-03-31T21:52:22+00:00 app[web.1]: Started GET "/users/1" for 165.123.234.207 at 2012-03-31 21:52:22 +0000
+2012-03-31T21:52:22+00:00 app[web.1]: Processing by UsersController#show as HTML
+2012-03-31T21:52:22+00:00 app[web.1]:   Parameters: {"id"=>"1"}
+2012-03-31T21:52:23+00:00 app[web.1]:   Rendered shared/_stats.html.erb (44.1ms)
+2012-03-31T21:52:23+00:00 app[web.1]:   Rendered users/_follow.html.erb (1.4ms)
+2012-03-31T21:52:23+00:00 app[web.1]:   Rendered users/_follow_form.html.erb (4.0ms)
+2012-03-31T21:52:23+00:00 app[web.1]:   Rendered users/show.html.erb within layouts/application (53.5ms)
+2012-03-31T21:52:23+00:00 app[web.1]:   Rendered layouts/_header.html.erb (1.1ms)
+2012-03-31T21:52:23+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.3ms)
+2012-03-31T21:52:23+00:00 app[web.1]: Completed 200 OK in 98ms (Views: 13.0ms | ActiveRecord: 83.8ms)
+2012-03-31T21:52:23+00:00 app[web.1]: cache: [GET /users/1] miss
+2012-03-31T21:52:23+00:00 heroku[router]: GET tutoring.herokuapp.com/users/1 dyno=web.1 queue=0 wait=0ms service=106ms status=304 bytes=0
+2012-03-31T21:52:24+00:00 app[web.1]: 
+2012-03-31T21:52:24+00:00 app[web.1]: 
+2012-03-31T21:52:24+00:00 app[web.1]: Started POST "/relationships" for 165.123.234.207 at 2012-03-31 21:52:24 +0000
+2012-03-31T21:52:24+00:00 app[web.1]: Processing by RelationshipsController#create as HTML
+2012-03-31T21:52:24+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"lcPEA9IE9dOQScC2IgMD+Yqz5Yn1Kj6IjKoBRBK4KAQ=", "relationship"=>{"followed_id"=>"1"}, "commit"=>"Follow"}
+2012-03-31T21:52:25+00:00 app[web.1]: cache: [POST /relationships] invalidate, pass
+2012-03-31T21:52:25+00:00 app[web.1]: Redirected to http://tutoring.herokuapp.com/users/1
+2012-03-31T21:52:25+00:00 app[web.1]: Completed 302 Found in 117ms (ActiveRecord: 108.5ms)
+2012-03-31T21:52:25+00:00 heroku[router]: POST tutoring.herokuapp.com/relationships dyno=web.1 queue=0 wait=0ms service=193ms status=302 bytes=103
+2012-03-31T21:52:25+00:00 app[web.1]: 
+2012-03-31T21:52:25+00:00 app[web.1]: 
+2012-03-31T21:52:25+00:00 app[web.1]: Started GET "/users/1" for 165.123.234.207 at 2012-03-31 21:52:25 +0000
+2012-03-31T21:52:25+00:00 app[web.1]: Processing by UsersController#show as HTML
+2012-03-31T21:52:25+00:00 app[web.1]:   Parameters: {"id"=>"1"}
+2012-03-31T21:52:25+00:00 app[web.1]:   Rendered shared/_stats.html.erb (8.0ms)
+2012-03-31T21:52:25+00:00 app[web.1]:   Rendered users/_unfollow.html.erb (1.9ms)
+2012-03-31T21:52:25+00:00 app[web.1]:   Rendered users/_follow_form.html.erb (4.8ms)
+2012-03-31T21:52:25+00:00 app[web.1]:   Rendered users/show.html.erb within layouts/application (17.6ms)
+2012-03-31T21:52:25+00:00 app[web.1]:   Rendered layouts/_header.html.erb (1.0ms)
+2012-03-31T21:52:25+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.3ms)
+2012-03-31T21:52:25+00:00 app[web.1]: Completed 200 OK in 23ms (Views: 11.6ms | ActiveRecord: 10.4ms)
+2012-03-31T21:52:25+00:00 app[web.1]: cache: [GET /users/1] miss
+2012-03-31T21:52:25+00:00 heroku[router]: GET tutoring.herokuapp.com/users/1 dyno=web.1 queue=0 wait=0ms service=32ms status=200 bytes=2959
+2012-03-31T21:52:27+00:00 app[web.1]: 
+2012-03-31T21:52:27+00:00 app[web.1]: 
+2012-03-31T21:52:27+00:00 app[web.1]: Started GET "/users/1/rides" for 165.123.234.207 at 2012-03-31 21:52:27 +0000
+2012-03-31T21:52:27+00:00 app[web.1]: Processing by UsersController#rides as HTML
+2012-03-31T21:52:27+00:00 app[web.1]:   Parameters: {"id"=>"1"}
+2012-03-31T21:52:28+00:00 app[web.1]:   Rendered shared/_stats.html.erb (142.8ms)
+2012-03-31T21:52:28+00:00 app[web.1]:   Rendered users/show_rides.html.erb within layouts/application (388.7ms)
+2012-03-31T21:52:28+00:00 app[web.1]:   Rendered layouts/_header.html.erb (1.2ms)
+2012-03-31T21:52:28+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.3ms)
+2012-03-31T21:52:28+00:00 app[web.1]: Completed 200 OK in 449ms (Views: 10.7ms | ActiveRecord: 435.8ms)
+2012-03-
+31T21:52:28+00:00 app[web.1]: cache: [GET /users/1/rides] miss
+2012-03-31T21:52:28+00:00 heroku[router]: GET tutoring.herokuapp.com/users/1/rides dyno=web.1 queue=0 wait=0ms service=458ms status=200 bytes=2537
+2012-03-31T22:33:36+00:00 app[web.1]: 
+2012-03-31T22:33:36+00:00 app[web.1]: 
+2012-03-31T22:33:36+00:00 app[web.1]: Started GET "/" for 165.123.234.25 at 2012-03-31 22:33:36 +0000
+2012-03-31T22:33:36+00:00 app[web.1]: Processing by PagesController#home as HTML
+2012-03-31T22:33:36+00:00 app[web.1]:   Rendered shared/_user_info.html.erb (5.7ms)
+2012-03-31T22:33:36+00:00 app[web.1]:   Rendered shared/_stats.html.erb (10.8ms)
+2012-03-31T22:33:36+00:00 app[web.1]:   Rendered layouts/_footer.html.erb (0.3ms)
+2012-03-31T22:33:36+00:00 app[web.1]: Completed 200 OK in 137ms (Views: 23.6ms | ActiveRecord: 110.0ms)
+2012-03-31T22:33:36+00:00 app[web.1]:   Rendered layouts/_header.html.erb (1.5ms)
+2012-03-31T22:33:36+00:00 app[web.1]:   Rendered shared/_feed.html.erb (45.0ms)
+2012-03-31T22:33:36+00:00 app[web.1]: cache: [GET /] miss
+2012-03-31T22:33:36+00:00 app[web.1]:   Rendered shared/_feed_item.html.erb (7.3ms)
+2012-03-31T22:33:36+00:00 app[web.1]:   Rendered pages/home.html.erb within layouts/application (63.8ms)
+2012-03-31T22:33:36+00:00 heroku[router]: GET tutoring.herokuapp.com/ dyno=web.1 queue=0 wait=0ms service=146ms status=200 bytes=3806
+2012-03-31T22:33:36+00:00 app[web.1]: cache: [GET /assets/application-055b8377542c3c07a32b854dd4494013.js] miss
+2012-03-31T22:33:36+00:00 heroku[router]: GET tutoring.herokuapp.com/assets/application-055b8377542c3c07a32b854dd4494013.js dyno=web.1 queue=0 wait=0ms service=5ms status=304 bytes=0
+2012-03-31T22:33:36+00:00 heroku[router]: GET tutoring.herokuapp.com/assets/application-240813fca9bd24c6c6c5238f8e29ea16.css dyno=web.1 queue=0 wait=0ms service=39ms status=304 bytes=0
+2012-03-31T22:33:36+00:00 app[web.1]: cache: [GET /assets/application-240813fca9bd24c6c6c5238f8e29ea16.css] miss
+2012-03-31T22:33:40+00:00 app[web.1]: 
+2012-03-31T22:33:40+00:00 app[web.1]: Started POST "/passenger_rides" for 165.123.234.25 at 2012-03-31 22:33:40 +0000
+2012-03-31T22:33:40+00:00 app[web.1]: 
+2012-03-31T22:33:40+00:00 app[web.1]: Processing by PassengerRidesController#create as HTML
+2012-03-31T22:33:40+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"lcPEA9IE9dOQScC2IgMD+Yqz5Yn1Kj6IjKoBRBK4KAQ=", "passenger_ride"=>{"ride_id"=>"2"}, "commit"=>"Hop in"}
+2012-03-31T22:33:40+00:00 app[web.1]: Completed 500 Internal Server Error in 74ms
+2012-03-31T22:33:40+00:00 app[web.1]:   app/controllers/passenger_rides_controller.rb:7:in `create'
+2012-03-31T22:33:40+00:00 app[web.1]: 
+2012-03-31T22:33:40+00:00 app[web.1]: 
+2012-03-31T22:33:40+00:00 app[web.1]: NoMethodError (undefined method `-' for "4":String):
+2012-03-31T22:33:40+00:00 app[web.1]: cache: [POST /passenger_rides] invalidate, pass
+2012-03-31T22:33:40+00:00 app[web.1]: 
+2012-03-31T22:33:40+00:00 heroku[router]: POST tutoring.herokuapp.com/passenger_rides dyno=web.1 queue=0 wait=0ms service=82ms status=500 bytes=728
