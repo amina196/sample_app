@@ -1,5 +1,6 @@
-
-<%= form_for(@micropost) do |f| %>
+<div class="row">
+<div class="span6">
+<%= form_for(@micropost, :html => { :class => "form-horizontal"}) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
     <%= f.label :start_town %><br />
@@ -31,3 +32,4 @@
   <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 <% end %>
 
+  </div>  </div>

@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     if @user.save
 		UserMailer.welcome_email(@user).deliver
 		sign_in @user
-		flash[:success] = "Welcome to the sample app ! "
+		flash[:success] = "Welcome to Mov'UTC ! "
 		redirect_to @user  #it tells the browser to send a new request for a different URL, the newly created user’s profile
     else
       render 'new'
@@ -27,7 +27,8 @@ class UsersController < ApplicationController
   end
   
   def edit
-		# No need to define @user = User.find(params[:id]) since it is gonna be created in the correct_user helper
+		# No need to define @user = User.find(params[:id]) 
+    #since it is gonna be created in the correct_user helper
 	
   end
   
@@ -55,7 +56,7 @@ class UsersController < ApplicationController
   end
 
 def following
-    @title = "Following"
+    @title = "Following users"
     @user = User.find(params[:id])
     @users = @user.followed_users.paginate(page: params[:page])
     render 'show_follow'
@@ -72,7 +73,7 @@ def following
     @title = "Rides"
     @user = User.find(params[:id])
     @rides = @user.rides.paginate(page: params[:page])
-    render 'show_rides'
+   # render 'show_rides'
   end
 
 

@@ -1,6 +1,20 @@
-<% if @feed_items.any? %>
-  <ol class="microposts">
-    <%= render partial: 'shared/feed_item', collection: @feed_items %>
-  </ol>
-  <%= will_paginate @feed_items %>
-<% end %>
+
+<table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Driver</th>
+            <th>Date</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Seats</th>
+            <th>Participation</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <% if @feed_items.any? %>
+              <%= render partial: 'shared/feed_item', collection: @feed_items %>
+              <%= will_paginate @feed_items %>
+          <% end %>        
+        </tbody>
+</table>

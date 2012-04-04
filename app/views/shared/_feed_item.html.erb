@@ -1,30 +1,53 @@
-<li id="<%= feed_item.id %>">
-    <%= link_to feed_item.user.name, feed_item.user %>
+
+  
+    <!--<%= link_to feed_item.user.name, feed_item.user %>
   </span>
   <span class="content"><%= feed_item.content %></span>
-  <span class="content">RIDES ON : <%= feed_item.date %></span>
-  <span class="content">Leaving from : <%= feed_item.start_town %> - <%= feed_item.start_location %></span>
-  <span class="content">Dropping at : <%= feed_item.drop_town %> - <%= feed_item.drop_location %></span>
-  <span class="content">Available seats : <%= feed_item.nb_passengers %> seats</span>
+  <span class="content">RIDES ON : </span>
+  <span class="content">Leaving from : </span>
+  <span class="content">Dropping at : </span>
+  <span class="content">Available seats :  seats</span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
   </span>
 
 
-  <%if current_user.hopped_in?(feed_item) %>
-      <%= form_for(current_user.passenger_rides.find_by_ride_id(feed_item.id),
-             html: { method: :delete }) do |f| %>
-      <%= f.submit "Jump off", :class => "btn btn-large" %>
-      <% end %>
- 
- <% else %>
-    <%= form_for(current_user.passenger_rides.build(ride_id: feed_item.id)) do |f| %>
-     <div><%= f.hidden_field :ride_id %></div>
-        <%= f.submit "Hop in", :class => "btn btn-large btn-primary" %>     
-  <% end %>
-    
- 
- <% end %>
-  </div>
+    -->
 
-</li>
+
+
+          <tr>
+            <td>
+              <%= feed_item.user.name %>
+            </td>
+            <td>
+              <%= feed_item.date %>
+            </td>
+            <td>
+                <strong><%= feed_item.start_town %></strong> <br>
+              <%= feed_item.start_location %>
+            </td>
+            <td> <strong><%= feed_item.drop_town %></strong> <br>
+              <%= feed_item.drop_location %></td>
+            <td>
+                <h1><%= feed_item.nb_passengers %></h1>
+
+            </td>
+            <td>
+              
+                <%if current_user.hopped_in?(feed_item) %>
+                    <%= form_for(current_user.passenger_rides.find_by_ride_id(feed_item.id),
+                         html: { method: :delete }) do |f| %>
+                      <%= f.submit "Jump off", :class => "btn btn-small" %>
+                    <% end %>
+             
+                <% else %>
+                    <%= form_for(current_user.passenger_rides.build(ride_id: feed_item.id)) do |f| %>
+                      <div><%= f.hidden_field :ride_id %></div>
+                      <%= f.submit "Hop in", :class => "btn btn-small btn-primary" %>     
+                    <% end %>    
+             
+                 <% end %>
+            </td>
+           
+          </tr>

@@ -24,8 +24,8 @@ module SessionsHelper
 	end
 	
 	def current_user?(user)
-    user == current_user
-  end
+    	user.id == current_user.id
+  	end
 	
 	def redirect_back_or(default)
 		redirect_to(session[:return_to] || default) #evaluates to session[:return_to] unless it is nil 
@@ -51,7 +51,7 @@ module SessionsHelper
 	end
 	
 	private
-	def user_from_remembered_token
+	def user_from_remembered_token	
 		remembered_token = cookies[:remember_token]
 		User.find_by_remember_token(remembered_token) unless remembered_token.nil?
 	end

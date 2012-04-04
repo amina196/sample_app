@@ -17,13 +17,30 @@
   <div class="span8">
     <%= render 'follow_form' if signed_in? %>
 	
-    <% if @user.microposts.any? %>
-      <h3> My Rides  (<%= @user.microposts.count %>)</h3>
-      <ol class="microposts">
-        <%= render partial: 'shared/feed_item', collection: @microposts %> 
-      </ol>
+    
+      <h3> <%= @user.name%> will be driving the following : (<%= @user.microposts.count %>)</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Seats</th>
+
+            <th>Participation</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+           <% if @user.microposts.any? %>
+              <%= render partial: 'shared/feed_item', collection: @microposts %>
+              <%= will_paginate @microposts %>
+          <% end %>        
+        </tbody>
+        
+      </table>
       <%= will_paginate @microposts %>
-    <% end %>    
+       
  </div>
   
 </div> 

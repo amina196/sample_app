@@ -1,12 +1,62 @@
 <% provide :title, 'All users' %>
-<h1>All users</h1>
 
-<%= will_paginate %>
 
-<ul class="users">
+<% if signed_in? %>
 	
-    <%= render @users%>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+	  <section>
+        <%= render 'shared/stats' %>
+      </section>
+	  <section>
+        <%= link_to "Search for a ride", new_search_path, :class => "btn btn-primary" %>
+		<%= link_to "Post a ride", new_micropost_path, :class => "btn btn-success" %>
+      </section>
+    </aside>
+	
+	<div class="span8">
+      <h1>All users</h1>
+     
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>User Name</th>
+            <th>User Email</th>
+            <% if current_user.admin? %>
+              <th>Get rid of him ?</th>
+            <% end %>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <% if @users.any? %>
+              <%= render @users %>
+          <% end %>        
+        </tbody>
+        <%= will_paginate @users %>
+</table>
 
-</ul>
 
-<%= will_paginate %>
+
+    </div>
+	
+  </div>
+	
+<% else %>
+	<div class="center hero-unit">
+		<h1>Welcome to Move UTC</h1>
+		<h2>You're this close to finding a ride !</h2>
+		<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+	</div>
+<% end %>
+
+
+
+
+
+
+
+

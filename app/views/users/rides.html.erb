@@ -1,0 +1,46 @@
+<%= provide(:title, @title) %>
+<div class="row">
+
+  <aside class="span4">
+    <section>
+      <%= gravatar_for @user %>
+      <h1><%= @user.name %></h1>
+      <span><%= link_to "view my profile", @user %></span>
+      
+    </section>
+    <section>
+      <%= render 'shared/stats' %>
+    </section>
+  </aside>
+
+  <div class="span8">
+    <h3> <%= @user.name%> will be sitting in the following : </h3>
+   
+      
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Driver</th>
+            <th>Date</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Seats</th>
+            <th>Participation</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+           <% if @rides.any? %>
+              <%= render partial: 'shared/feed_item', collection: @rides %>
+              <%= will_paginate @rides %>
+          <% end %>        
+        </tbody>
+      </table>
+      
+
+
+      </div>
+
+
+</div>

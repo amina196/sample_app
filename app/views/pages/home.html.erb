@@ -9,13 +9,13 @@
         <%= render 'shared/stats' %>
       </section>
 	  <section>
-        <%= link_to "Search for a ride", new_search_path %> <br/>
-		<%= link_to "Post a ride", new_micropost_path %>
+        <%= link_to "Search for a ride", new_search_path, :class => "btn btn-primary" %>
+		<%= link_to "Post a ride", new_micropost_path, :class => "btn btn-success" %>
       </section>
     </aside>
 	
 	<div class="span8">
-      <h3>Ride Feed</h3>
+      <h3>Rides posted by people followed ! </h3>
       <%= render 'shared/feed' %>
     </div>
 	
@@ -23,10 +23,10 @@
 	
 <% else %>
 	<div class="center hero-unit">
-		<h1>Welcome to Move UTC</h1>
+		<h1>Welcome to Mov'UTC</h1>
 		<h2>You're this close to finding a ride !</h2>
 		<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
 	</div>
-	<% end %>
+<% end %>
 	
 	
