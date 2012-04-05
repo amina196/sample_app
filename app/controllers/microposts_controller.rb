@@ -1,4 +1,5 @@
 class MicropostsController < ApplicationController
+	
 before_filter :signed_in_user #only: [:create, :destroy] : useless because these are the only actions that we have !! :)
 before_filter :correct_user, only: [:destroy]
 	

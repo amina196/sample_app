@@ -1,5 +1,48 @@
-<h1> Search result </h1>
-<%= render partial: 'shared/feed_item', collection: @search.microposts %> 
+
+
+<div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+	  <section>
+        <%= render 'shared/stats' %>
+      </section>
+	  <section>
+        <%= link_to "Search for a ride", new_search_path, :class => "btn btn-primary" %>
+		<%= link_to "Post a ride", new_micropost_path, :class => "btn btn-success" %>
+      </section>
+    </aside>
+	
+	<div class="span8">
+      <h3>Search result </h3>
+      
+
+          
+	
+  
 
 
 
+
+
+<table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Driver</th>
+            <th>Date</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Seats</th>
+            <th>Participation</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <% if @search.microposts.any? %>
+              <%= render partial: 'shared/feed_item', collection: @search.microposts %>
+              
+          <% end %>        
+        </tbody>
+</table>
+</div>

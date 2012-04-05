@@ -3,14 +3,14 @@
       <section>
         <%= render 'shared/user_info' %>
       </section>
-	  <section>
+    <section>
         <%= render 'shared/stats' %>
       </section>
-	  <section>
-        <%= link_to "Search for a ride", new_search_path %> <br/>
-		<%= link_to "Post a ride", new_micropost_path %>
+    <section>
+        <%= link_to "Search for a ride", new_search_path, :class => "btn btn-primary" %>
+    <%= link_to "Post a ride", new_micropost_path, :class => "btn btn-success" %>
       </section>
-	</aside>
+    </aside>
 
 
 	<div class="span8">

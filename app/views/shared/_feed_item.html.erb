@@ -25,16 +25,15 @@
             </td>
             <td>
                 <strong><%= feed_item.start_town %></strong> <br>
-              <%= feed_item.start_location %>
+                <%= feed_item.start_location %>
             </td>
-            <td> <strong><%= feed_item.drop_town %></strong> <br>
-              <%= feed_item.drop_location %></td>
+            <td> 
+                  <strong><%= feed_item.drop_town %></strong> <br>
+                  <%= feed_item.drop_location %></td>
             <td>
                 <h1><%= feed_item.nb_passengers %></h1>
-
             </td>
-            <td>
-              
+            <td>              
                 <%if current_user.hopped_in?(feed_item) %>
                     <%= form_for(current_user.passenger_rides.find_by_ride_id(feed_item.id),
                          html: { method: :delete }) do |f| %>
