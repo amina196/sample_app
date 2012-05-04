@@ -1,6 +1,6 @@
 class ChangeDateOnMicroposts < ActiveRecord::Migration
   def up
-  	change_column(:microposts, :date, :date)
+  	change_column(:microposts, :string, :date)
   end
 
   def down
