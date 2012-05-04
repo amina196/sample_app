@@ -33,7 +33,10 @@
             <td>
                 <h1><%= feed_item.nb_passengers %></h1>
             </td>
-            <td>              
+            <td> 
+               <%if feed_item.user_id == current_user.id %>
+                  Driving ! 
+               <% else %>          
                 <%if current_user.hopped_in?(feed_item) %>
                     <%= form_for(current_user.passenger_rides.find_by_ride_id(feed_item.id),
                          html: { method: :delete }) do |f| %>
@@ -46,6 +49,7 @@
                       <%= f.submit "Hop in", :class => "btn btn-small btn-primary" %>     
                     <% end %>    
              
+                 <% end %>
                  <% end %>
             </td>
            

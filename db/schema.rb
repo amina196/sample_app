@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120331210442) do
+ActiveRecord::Schema.define(:version => 20120425182554) do
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20120331210442) do
     t.string   "start_location"
     t.string   "drop_town"
     t.string   "drop_location"
-    t.string   "date"
+    t.date     "date",           :limit => 255
     t.integer  "nb_passengers",  :limit => 255
   end
 
