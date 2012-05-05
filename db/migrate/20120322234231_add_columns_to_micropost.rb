@@ -8,7 +8,7 @@ class AddColumnsToMicropost < ActiveRecord::Migration
 
     add_column :microposts, :drop_location, :string
 
-    add_column :microposts, :date, :string
+    add_column :microposts, :date, :date
 
     add_column :microposts, :nb_passengers, :string
 
